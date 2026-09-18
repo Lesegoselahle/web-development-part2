@@ -1,0 +1,158 @@
+/* Humi Naturals - Brand System */
+:root {
+  --cream: #FAF6F0;
+  --sand: #EDE3D3;
+  --cocoa: #3E2E25;
+  --caramel: #A67B5B;
+  --sage: #7A8B6F;
+  --clay: #D9A679;
+  --white: #FFFFFF;
+  --text-muted: #6B5E54;
+
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(62,46,37,0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--cocoa);
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--sand);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; }
+
+.nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--cocoa);
+  font-weight: 500;
+}
+.nav a:hover { color: var(--caramel); }
+
+/* Buttons */
+.btn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.btn-primary { background: var(--cocoa); color: var(--white); }
+.btn-primary:hover { background: var(--caramel); }
+.btn-outline { background: transparent; border: 2px solid var(--cocoa); color: var(--cocoa); }
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: center;
+}
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.hero p { color: var(--text-muted); margin-bottom: 1.5rem; }
+.hero-image {
+  background: var(--sand);
+  border-radius: var(--radius);
+  min-height: 380px;
+}
+
+/* Shop by Hair Type */
+.section { padding: 3rem 2rem; text-align: center; }
+.section h2 { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 2rem; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  background: var(--sand);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* Bestsellers */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.product {
+  background: var(--white);
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.product .price { font-weight: 700; color: var(--caramel); margin: 0.5rem 0; }
+
+/* Newsletter */
+.newsletter {
+  background: var(--sage);
+  color: var(--white);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+  margin: 2rem;
+  text-align: center;
+}
+.newsletter input {
+  padding: 0.9rem 1.2rem;
+  border-radius: 30px;
+  border: none;
+  width: 280px;
+  margin-right: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: var(--cocoa);
+  color: var(--cream);
+}
+.footer a { color: var(--sand); text-decoration: none; font-size: 0.95rem; }
+.footer h4 { margin-bottom: 1rem; font-family: var(--font-heading); }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero, .cards, .product-grid, .footer { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+}
+.logo { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+.nav { display: flex; gap: 1.5rem; white-space: nowrap; }
+.header { flex-wrap: nowrap; }
