@@ -36,5 +36,5 @@ Humi Naturals is a student-built e-commerce website showcasing natural hair prod
 1.added products.html
 
 ## Author
-[Your Name] - [Your Student Number]
-Submitted for [Module Name] - 2026
+[lesego selahle] - [st10511517]
+Submitted for [web development] - 2026
